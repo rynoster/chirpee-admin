@@ -23,7 +23,8 @@ exports.loginGet = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/login', {
-    title: 'Log in'
+    title: 'Log in',
+    layout: false
   });
 };
 
