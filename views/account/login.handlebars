@@ -1,32 +1,69 @@
-<div class="login-container container">
-  <div class="panel">
-    <div class="panel-body">
-      {{#if messages.error}}
-        <div role="alert" class="alert alert-danger">
-          {{#each messages.error}}
-            <div>{{msg}}</div>
-          {{/each}}
-        </div>
-      {{/if}}
-      <form method="POST">
-        <legend>Log In</legend>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Email" class="form-control" autofocus>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password" class="form-control">
-        </div>
-        <div class="form-group"><a href="/forgot"><strong>Forgot your password?</strong></a></div>
-        <button type="submit" class="btn btn-success">Log in</button>
-      </form>
-      <div class="hr-title"><span>or</span></div>
-      <div class="btn-toolbar text-center">
-      </div>
-    </div>
-  </div>
-  <p class="text-center">
-    Don't have an account? <a href="/signup"><strong>Sign up</strong></a>
-  </p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        {{!-- This is the title of the page--}}
+        <title>chirpee admin</title>
+
+        <!-- Bootstrap -->
+        <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+       
+        <!--side menu plugin-->
+        <link href="/plugins/hoe-nav/hoe.css" rel="stylesheet">
+       
+        <!-- icons-->
+        <link href="/plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+         <link href="/plugins/iCheck/custom.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+
+        <script src="/js/modernizr.js"></script>
+    </head>
+    <body>
+
+        <div class="page-center">
+            <div class="page-center-in">
+                <form class="sign-box">
+                    <div>
+                        <img src="/images/brand/chirpee.svg" alt="" width="150px">
+                    </div>
+                    <header class="sign-title">Sign In</header>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email address">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="pull-right">
+                            <p><a href="#">Reset Password</a></p>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success rounded btn-lg">Sign in</button>
+
+                </form>
+            </div><!--page center in-->
+        </div><!--page center-->
+
+        <!--Common plugins-->
+        <script src="/plugins/jquery/dist/jquery.min.js"></script>
+        <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/plugins/iCheck/icheck.min.js"></script>
+    
+    
+
+
+    {{!-- Page JQUERY --}}
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_flat-blue',
+                radioClass: 'icheckbox_flat-blue'
+            });
+        });
+    </script>
+    </body>
+</html>
