@@ -60,6 +60,10 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', HomeController.index);
+
+//RC: add controller for home page
+app.get('/home', HomeController.home);
+
 app.get('/contact', contactController.contactGet);
 app.post('/contact', contactController.contactPost);
 app.get('/account', userController.ensureAuthenticated, userController.accountGet);
